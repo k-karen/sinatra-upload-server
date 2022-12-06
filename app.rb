@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'json'
 
+# curl -XPOST -F "data=@test.log" https://...
 post '/' do
   File.open("tmp/#{Time.now.to_i}", 'w+') do |file|
     loop do
